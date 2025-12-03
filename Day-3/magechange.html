@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image change</title>
+    <script>
+        let c=1
+        function change()
+        {
+            
+            let a=document.getElementById("img1");
+        //     if(a.src.endsWith('FB.png'))
+        // {
+        //     a.src='TW.png';
+        // }
+        // else
+        // {
+        //     a.src="FB.png"
+        // }
+
+        if (c%2==0){
+            a.src = 'FB.png'
+            c=1
+        }else{
+            a.src = "TW.png"
+            c=2
+        }
+        console.log(c)
+        }
+    </script>
+</head>
+<body>
+    <img src="FB.png" height="100px" id="img1">
+    <button onclick="change()">Previous</button>
+    <button onclick="change()">Next</button>
+</body>
+</html>

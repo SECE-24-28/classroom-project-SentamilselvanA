@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <script>
+        function t()
+        {
+            let a=document.getElementById("num1").value;
+             let b=document.getElementById("num2").value;
+             let c=parseInt(a)+parseInt(b);
+             document.getElementById("ans").value=c;
+            // document.getElementById("name1").value=a;
+            // alert(a);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="enter first number" id="num1">
+    <input type="text" placeholder="enter second nummber" id="num2">
+    <br>
+    <input type="number" placeholder="answer" id="ans">
+    <button onclick="t()">Click</button>
+    <p></p>
+</body>
+</html>

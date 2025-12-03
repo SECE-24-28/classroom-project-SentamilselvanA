@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js task-1</title>
+    <script>
+        // function cal1()
+        // {
+        //     let a=document.getElementById("num1").value;
+        //     let b=document.getElementById("num2").value;
+        //     let c=parseInt(a)+parseInt(b);
+        //     document.getElementById("ans").value=c;
+        // }
+        // function cal2()
+        // {
+        //     let a=document.getElementById("num1").value;
+        //     let b=document.getElementById("num2").value;
+        //     let c=parseInt(a)-parseInt(b);
+        //     document.getElementById("ans").value=c;
+        // }
+        // function cal3()
+        // {
+        //     let a=document.getElementById("num1").value;
+        //     let b=document.getElementById("num2").value;
+        //     let c=parseInt(a)*parseInt(b);
+        //     document.getElementById("ans").value=c;
+        // }
+        // function cal4()
+        // {
+        //     let a=document.getElementById("num1").value;
+        //     let b=document.getElementById("num2").value;
+        //     let c=parseInt(a)%parseInt(b);
+        //     document.getElementById("ans").value=c;
+        // }
+        function cal(a)
+        {
+             let b=document.getElementById("num1").value;
+            let c=document.getElementById("num2").value;
+          if(a=='add')
+          {
+            let d=parseInt(b)+parseInt(c);
+            document.getElementById("ans").value=d;
+          }
+          if(a=='sub')
+          {
+            let d=parseInt(b)-parseInt(c);
+            document.getElementById("ans").value=d;
+          }
+           if(a=='mul')
+          {
+            let d=parseInt(b)*parseInt(c);
+            document.getElementById("ans").value=d;
+          }
+           if(a=='div')
+          {
+            let d=parseInt(b)-parseInt(c);
+            document.getElementById("ans").value=d;
+          }
+          
+        }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="enter first number" id="num1">
+    <input type="number" placeholder="enter first number" id="num2">
+    <input type="number" placeholder="answer" id="ans">
+    <br>
+    <button onclick="cal('add')" >Add</button>
+     <button onclick="cal('sub')" >Sub</button>
+      <button onclick="cal('mul')" >Mul</button>
+       <button onclick="cal('div')" >Div</button>
+</body>
+</html>
