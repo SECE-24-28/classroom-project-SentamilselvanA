@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script>
+        function press()
+        {
+            let b=document.getElementById("main");
+           let hd= document.createElement("h1");
+            hd.innerHTML="I am Shairam";
+            // hd.style.backgroundColor="Black";
+            hd.style.color='Black';
+            b.appendChild(hd);
+        }
+    </script>
+</head>
+<body id="main">
+    <button id="btn" onclick="press()">Click</button>
+</body>
+</html>

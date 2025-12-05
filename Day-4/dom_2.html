@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+    <script>
+      function press() {
+        let b = document.getElementById("peacock");
+
+        // let hd = document.getElementById("peacock");
+        b.innerHTML = "Peacock is a nactional Animal";
+
+        // let c = document.getElementById("main");
+
+        let append = document.getElementById("app");
+
+        let a = document.getElementById("remove");
+
+         append.removeChild(a);
+
+        let st = ` hello world!!`;
+        let app = document.createElement("h1");
+        app.textContent = st
+        append.appendChild(app);
+      
+
+        // alert("Shairam Deleted");
+       
+       
+        
+      }
+    </script>
+  </head>
+  <body id="main">
+    <h2 id="peacock">Peacock</h2>
+    <button id="btn" onclick="press()">Click</button>
+    
+
+    <div id="app">
+        <h1 id="remove">Delete</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkMode</title>
+    <script>
+      let c = 2;
+      function change() {
+        let b = document.getElementById("main");
+        if (c % 2 == 0) {
+          b.style.color = "white";
+          b.style.backgroundColor = "Black";
+          c = 1;
+        } else {
+          b.style.color = "Black";
+          b.style.backgroundColor = "White";
+          c = 2;
+        }
+      }
+    </script>
+    
+  </head>
+  <body id="main">
+    <div id="div">
+      <h1 class="txt">Light Mode</h1>
+      <button onclick="change()" id="btn">Change</button>
+    </div>
+  </body>
+</html>

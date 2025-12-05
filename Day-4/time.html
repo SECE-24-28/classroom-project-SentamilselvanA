@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+
+    <script>
+        let count = 0;
+        let interval;
+
+        function showTime() {
+            let s1 = document.getElementById("s1");
+            let s2 = document.getElementById("s2");
+            let s3 = document.getElementById("s3");
+
+            let hr = parseInt(s1.innerHTML);
+            let min = parseInt(s2.innerHTML);
+            let sec = parseInt(s3.innerHTML);
+
+            interval = setInterval(() => {
+                sec++;
+                
+                if(sec >= 60){
+                    sec = 0;
+                    min++;
+                }
+                if(min >= 60){
+                    min = 0;
+                    hr++;
+                }
+                if(hr>=24)
+                {
+                    hr=0;
+                    min=0;
+                    sec=0;
+                }
+
+                s1.innerHTML = hr;
+                s2.innerHTML = min;
+                s3.innerHTML = sec;
+
+            }, 1000);       
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Digital Clock</h1>
+
+    <p class="p">
+        <span id="s1">23</span> :
+        <span id="s2">59</span> :
+        <span id="s3">49</span>
+    </p>
+
+    <button onclick="showTime()">Show Time</button>
+</body>
+</html>

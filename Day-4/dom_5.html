@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-5</title>
+  </head>
+  <body>
+    <form>
+      <p id="error" style="color: blue"></p>
+      <label for=""> UserName</label>
+    <input type="text" placeholder="enter name" id="user" >
+    <label for="">Email</label>
+     
+      <input type="email" placeholder="enter Email" id="mail" />
+      <button type="submit" id="sub">Click</button>
+    </form>
+
+    <script>
+      let er = document.getElementById("error");
+      let us = document.getElementById("user");
+      let ma = document.getElementById("mail");
+      let su = document.getElementById("sub");
+      su.addEventListener("click", (e) => {
+        e.preventDefault();
+        // alert(us.value);
+        if (us.value == "" || ma.value == "") {
+          er.innerHTML = "Field should not empty...";
+        } else {
+          alert("Login Success......");
+          us.value = null;
+          ma.value = null;
+          er.innerHTML = "";
+        }
+      });
+    </script>
+  </body>
+</html>
