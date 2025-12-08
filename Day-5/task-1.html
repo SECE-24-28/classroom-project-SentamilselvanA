@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="RawData()">Raw Data</button>
+    <br>
+    <p>
+        Raw Data:
+    </p>
+    <p id="p1"></p>
+
+     <button onclick="fullData()">Raw Data</button>
+    <p>Structured Data:</p>
+    <p id="p2"></p>
+    
+
+    <script>
+        let url = 'https://jsonplaceholder.typicode.com/posts';
+        let rawdataurl = "https://jsonplaceholder.typicode.com/posts/1";
+        
+       RawData = async () =>{
+            let p1 = document.getElementById('p1');
+            p1.innerHTML="Loading"
+            let data1 = await fetch(rawdataurl);
+            data1 = await data1.json();
+            rawdata = JSON.stringify(data1);
+            p1.innerHTML = rawdata+"<br/><br/><br/>";
+            
+       }
+
+       fullData = async () =>{
+         let p2 = document.getElementById('p2');
+         p2.innerHTML="Loaidng";
+            let data = await fetch(url);
+            data = await data.json();
+            let result = "";
+            for(let obj of data){
+
+                result += `
+                            UserId:${obj.userId}<br/> <br/>
+                            id:${obj.id}<br/> <br/>
+                            title:${obj.title}<br/><br/>
+                            body:${obj.body}<br/><br/>
+                         `;
+            }
+
+           
+
+            // let p2 = document.getElementById('p2');
+            p2.innerHTML = result;
+        }
+        getData();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tile_Exa</title>
+  </head>
+  <body>
+    <button onclick="call()">Load Users</button>
+    <p id="pa"></p>
+
+
+    <script>
+      let url = "https://jsonplaceholder.typicode.com/posts/1";
+
+     async function call() {
+
+        let par = document.getElementById("pa");
+        let data = await fetch(url);
+        
+        console.log(data);
+        data = data.json();
+          par.innerHTML=JSON.stringify(data);
+        
+        // let stu={name:"Shairam",mail:"Shairam@gmail.com",city:"VellaKovil"};
+        // // par.innerHTML=`<b>${stu.name}</b><br>Eamil:${stu.mail}<br>
+        // // City:${stu.city}<br>`;
+        // let stu1={name:"SelvaPriyan",mail:"Selvapriyan@gmail.com",city:"Theni"};
+        // // par.innerHTML=`<b>${stu1.name}</b><br>Eamil:${stu1.mail}<br>
+        // // City:${stu.city}<br>`;
+        // let stu2={name:"Shankar",mail:"Shankar@gmail.com",city:"GopiChattipalayam"};
+        // par.innerHTML=`<b>${stu.name}</b><br>Eamil:${stu.mail}<br>
+        // City:${stu.city}<br><b>${stu1.name}</b><br>Eamil:${stu1.mail}<br>
+        // City:${stu.city}<br><b>${stu2.name}</b><br>Eamil:${stu2.mail}<br>
+        // City:${stu2.city}<br>`;
+      }
+      call()
+    </script>
+  </body>
+</html> -->

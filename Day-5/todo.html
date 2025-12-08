@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do App</title>
+</head>
+
+<body>
+
+  <h2>Simple To-Do App</h2>
+
+  <input id="in" type="text" placeholder="Enter task">
+  <button id="btn">Add</button>
+
+  <ul id="tl"></ul>
+
+  <script>
+    
+    const input = document.getElementById("in");
+    const addbtn = document.getElementById("btn");
+    const list = document.getElementById("tl");
+
+    addbtn.addEventListener("click",addTask);
+
+    function addTask() {
+      const text = input.value;
+      if (text === "")
+       return;
+
+      const li = document.createElement("li");
+      li.textContent = text;
+
+      // Mark as done on click
+      li.addEventListener("click", function () {
+        if (li.style.textDecoration === "line-through") {
+          li.style.textDecoration = "none";
+        } else {
+          li.style.textDecoration = "line-through";
+        }
+      });
+
+      // Delete button
+      const del = document.createElement("button");
+      del.textContent = "Delete";
+      
+      del.addEventListener("click", function () {
+        li.remove();
+      });
+
+      li.appendChild(del);
+      list.appendChild(li);
+
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-App</title>
+    <style>
+        
+    </style>
+    <script>
+        let btn = document.getElementsByClassName("delbtn");
+
+        btn.addEventListener("click",(e)=>{
+            btn.remove()
+        })
+
+
+        function add()
+        {
+        let a=document.getElementById("in").value;
+        let b=document.getElementById("main");
+        let task = document.createElement("div")
+        let deletebtn = document.createElement("button");
+            deletebtn.innerHTML="Delete";
+            deletebtn.class="delbtn";
+            
+         let hd=document.createElement("h1");
+        hd.innerHTML=a;
+        task.appendChild(hd)
+        task.appendChild(deletebtn)
+        b.appendChild(task);
+
+        }
+
+        // function deletecontente()
+        // {
+            
+        // }
+    </script>
+</head>
+<body id="main">
+    <h1>Simple To-Do App</h1>
+    <input placeholder="Enter Task" class="in1" id="in">
+    <button class="btn1" id="bt" onclick="add()">Add</button>
+
+  
+</body>
+</html> -->

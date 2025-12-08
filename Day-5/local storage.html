@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    <input placeholder="Enter Name" id="in1">
+    <input placeholder="Enter Email" id="in2">
+    <button onclick="demo()">Click</button>
+    <script>
+        let in1=document.getElementById("in1").value;
+        let in2=document.getElementById("in2").value;
+        let demo=()=>{
+        localStorage.setItem(in1,in2)
+    }
+        localStorage.setItem("Shairam","");
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile_Exa</title>
+</head>
+<body>
+    <button onclick="call()">Load Users</button>
+    <div id="pa">    </div>
+    <script>
+        // let url= 'https://jsonplaceholder.typicode.com/todos/1'
+        function call()
+        {
+        let par=document.getElementById("pa")
+        let stu={name:"Shairam",mail:"Shairam@gmail.com",city:"VellaKovil"};
+        // par.innerHTML=`<b>${stu.name}</b><br>Eamil:${stu.mail}<br>
+        // City:${stu.city}<br>`;
+        let stu1={name:"SelvaPriyan",mail:"Selvapriyan@gmail.com",city:"Theni"};
+        // par.innerHTML=`<b>${stu1.name}</b><br>Eamil:${stu1.mail}<br>
+        // City:${stu.city}<br>`;
+        let stu2={name:"Shankar",mail:"Shankar@gmail.com",city:"GopiChattipalayam"};
+        par.innerHTML=`<b>${stu.name}</b><br>Eamil:${stu.mail}<br>
+        City:${stu.city}<br><b>${stu1.name}</b><br>Eamil:${stu1.mail}<br>
+        City:${stu.city}<br><b>${stu2.name}</b><br>Eamil:${stu2.mail}<br>
+        City:${stu2.city}<br>`;
+        }
+    </script>
+</body>
+</html>
