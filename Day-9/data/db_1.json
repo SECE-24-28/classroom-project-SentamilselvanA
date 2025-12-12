@@ -1,0 +1,14 @@
+{
+    "Student": [
+        {
+            "sid":1,
+            "sname":"Sentamil",
+            "smark":56
+        },
+        {
+            "sid":2,
+            "sname":"selvan",
+            "smark":55
+        }
+    ]
+}
