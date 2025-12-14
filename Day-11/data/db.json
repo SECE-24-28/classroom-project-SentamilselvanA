@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "cname": "HTML",
+        "duration": "2 weeks"
+    },
+     {
+        "id": 2,
+        "cname": "css",
+        "duration": "5 weeks"
+    }
+]
